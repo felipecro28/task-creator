@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Amatic SC', cursive;
+};
+
+
+@media(max-width: 500px){
+
+    #p-logo{
+        width: fit-content;
+        font-size: 22px;
+    }
+}
