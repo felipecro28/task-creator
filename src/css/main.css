@@ -5,10 +5,11 @@
     font-family: 'Amatic SC', cursive;
 };
 
+
+
 @media(max-width: 500px){
 
     #p-logo{
         width: fit-content;
         font-size: 22px;
     }
-}
