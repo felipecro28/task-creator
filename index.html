@@ -12,14 +12,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet"> 
 </head>
 <body onload="onTimeNextPage()">
-    <nav class="navbar navbar-light bg-light" style="background-color: #c8d4b4; height: 10vh;">
-        <div class="container">
-          <a class="navbar-brand" href="#" style="display: flex; flex-direction: row; width: 100%;">
-            <img src="./src/img/blue-hamburg-icon.png" alt="" width="30" height="24" style="margin-top: 9px;">
-            <p id="p-logo" style="width: fit-content; margin: -5px auto; letter-spacing: 3px; font-size: 30px; color: #245880;"> Task Creator </p> 
-          </a>
-        </div>
-      </nav>
+  <nav class="navbar navbar-light bg-light" style="background-color: #c8d4b4; height: 8vh;">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="display: flex; flex-direction: row; width: 100%;">
+        <img id="hamburguer-icon" src="./src/img/blue-hamburg-icon.png" alt="" width="30" height="20" style="margin-top: 2px;" onclick="hamburguerMenu(event)">
+        <p id="p-logo" style="width: fit-content; margin: -12px auto; letter-spacing: 3px; font-size: 26px; color: #245880; height: fit-content;"> Task Creator </p> 
+      </a>
+    </div>
+  </nav>
+
+<nav class="menu-nav" style="width: 100%; height: 220px; padding: 20px; text-align: center; background-color: #fdfdfd; display: none;">
+    <h2>Hello, user!</h2>
+    <p style="display: inline-block"> This is your application menu </p>
+    <ul style="width: 100%; display: flex; flex-direction: row; justify-content: space-evenly; list-style: none; padding-left: 0; border: solid 1px #245880; border-radius: 20px;">
+        <li>Manage Tasks</li>
+        <li>Login</li>
+        <li>Back</li>
+    </ul>
+    <div class="social-media-icons" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+        <a href="https://github.com/felipecro28"><img src="../img/GitHub_Logo.png" alt="logo Github" width=50 height=30></a>
+        <a href="https://www.linkedin.com/in/carvalho-felipe28/"><img src="../img/linkedin.png" alt="logo Github" width=25 height=20></a>
+    </div>
+</nav>
+
+
       <main>
         <div class="logo" style="height: 90vh; width: 100% ;background-color: #6fa7a4e7; display: flex ;align-items: center; justify-content: center;">
             <img src="./src/img/task-creator.png" style="width: 70%; max-width: 350px; max-height: 90vh;">
