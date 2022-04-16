@@ -12,28 +12,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light" style="background-color: #c8d4b4; height: 10vh;">
-        <div class="container">
-          <a class="navbar-brand" href="#" style="display: flex; flex-direction: row; width: 100%;">
-            <img src="../img/blue-hamburg-icon.png" alt="" width="30" height="24" style="margin-top: 9px;">
-            <p id="p-logo" style="width: fit-content; margin: -5px auto; letter-spacing: 3px; font-size: 30px; color: #245880;"> Task Creator </p> 
-          </a>
-        </div>
-      </nav>
+  <nav class="navbar navbar-light bg-light" style="background-color: #c8d4b4; height: 8vh;">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="display: flex; flex-direction: row; width: 100%;">
+        <img id="hamburguer-icon" src="../img/blue-hamburg-icon.png" alt="" width="30" height="20" style="margin-top: 2px;" onclick="hamburguerMenu(event)">
+        <p id="p-logo" style="width: fit-content; margin: -12px auto; letter-spacing: 3px; font-size: 26px; color: #245880; height: fit-content;"> Task Creator </p> 
+      </a>
+    </div>
+  </nav>
 
-      <main style="height: 52vh; background-color: #c8d4b4">
-        <div class="image-task" style="width: 100%; background-color: #c8d4b4; display: flex; justify-content: center;">
-            <img src="../img/task-creator.png" width="30%" style="padding-top: 10px; max-width: 150px;">
-        </div>
+<nav class="menu-nav" style="width: 100%; height: 220px; padding: 20px; text-align: center; background-color: #fdfdfd; display: none;">
+    <h2>Hello, user!</h2>
+    <p style="display: inline-block"> This is your application menu </p>
+    <ul style="width: 100%; display: flex; flex-direction: row; justify-content: space-evenly; list-style: none; padding-left: 0; border: solid 1px #245880; border-radius: 20px;">
+        <li>Manage Tasks</li>
+        <li>Login</li>
+        <li>Back</li>
+    </ul>
+    <div class="social-media-icons" style="display: flex; flex-direction: row; justify-content: space-evenly;">
+        <a href="https://github.com/felipecro28"><img src="../img/GitHub_Logo.png" alt="logo Github" width=50 height=30></a>
+        <a href="https://www.linkedin.com/in/carvalho-felipe28/"><img src="../img/linkedin.png" alt="logo Github" width=25 height=20></a>
+    </div>
+</nav>
 
+      <main style="height: fit-content; background-color: #c8d4b4; padding: 15px 0 20px 0;">
         <div class="text-task" style="text-align: center; padding: 5px 0; background-color: #c8d4b4; color: #245880;">
-            <p style="font-size: 32px; padding: 1px;"> Hi, user! We're glad to have you here.</p>
-            <p style="font-size: 18px; padding: 1px;"> This is a brand new app wich you can create and manage your daily tasks.</p>
-            <p style="font-size: 18px; padding: 1px;"> You can add a new task bellow or click on manage tasks to see more features! </p>
+            <p style="font-size: 30px; padding: 1px;"> Hi, user! We're glad to have you here.</p>
+            <p style="font-size: 16px; padding: 1px;"> This is a brand new app wich you can create and manage your daily tasks.</p>
+            <p style="font-size: 16px; padding: 1px;"> You can add a new task bellow or click on menu to see more features! </p>
         </div>
       </main>
 
-      <form style="height: 48vh; font-size: 25px; text-align: center; background-color: #c8d4b4; color: #245880; width: 100%;">
+      <section style="background-color: #c8d4b4; display: none; justify-content: center; height: fit-content;">
+        <div class="alert alert-info" role="alert">
+          Task successfully added!
+        </div>
+      </section>
+
+      <form style="height: 62vh; font-size: 25px; text-align: center; background-color: #c8d4b4; color: #245880; width: 100%; padding-top: 30px;">
         <div class="form-group" style="background-color: #c8d4b4">
           <label for="formGroupExampleInput">New Task: </label>
           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your Task here :)" style="text-align: center; width: 300px; margin: 0 auto; margin-bottom: 5px;">
@@ -56,5 +72,7 @@
             <button type="button" class="btn btn-primary btn-sm" style="width: 100px; font-size: 18px; margin-top: 20px;">Create Task!</button>
         </div>
       </form>
+
+      <script src="../helpers/Js/hamburguerFunction.js"></script>
 </body>
 </html>
