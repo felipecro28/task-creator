@@ -25,7 +25,7 @@
   }
     </style>
   </head>
-<body>
+  <body onload="userView.viewNewUser(localStorage.getItem('newUser'))" style="background-color: #c8d4b4; color: #245880;">
   <nav class="navbar navbar-light bg-light" style="background-color: #c8d4b4; height: 8vh;">
     <div class="container">
       <a class="navbar-brand" href="#" style="display: flex; flex-direction: row; width: 100%;">
@@ -36,22 +36,12 @@
   </nav>
 
   <nav class="menu-div" style="width: 100%; height: 220px; padding: 20px; text-align: center; background-color: #fdfdfd; display: none;">
-    <h2>Hello, user!</h2>
-    <p style="display: inline-block"> This is your application menu </p>
-    <ul style="width: 100%; display: flex; flex-direction: row; justify-content: space-evenly; list-style: none; padding-left: 0; border: solid 1px #245880; border-radius: 20px;">
-        <a style=" text-decoration: none" href="../html/tasks.html"><li>Manage Tasks</li></a>
-        <a style=" text-decoration: none" href="../html/main.html"><li>Login</li></a>
-        <a style=" text-decoration: none" href="./main.html"><li>Back</li></a>
-    </ul>
-    <div class="social-media-icons" style="display: flex; flex-direction: row; justify-content: space-evenly;">
-        <a href="https://github.com/felipecro28"><img src="../img/GitHub_Logo.png" alt="logo Github" width=50 height=30></a>
-        <a href="https://www.linkedin.com/in/carvalho-felipe28/"><img src="../img/linkedin.png" alt="logo Github" width=25 height=20></a>
-    </div>
-</nav>
+
+  </nav>
 
       <main style="height: fit-content; background-color: #c8d4b4; padding: 15px 0 20px 0;">
         <div class="text-task" style="text-align: center; padding: 5px 0; background-color: #c8d4b4; color: #245880;">
-            <p style="font-size: 30px; padding: 1px;"> Hi, user! We're glad to have you here.</p>
+            <p style="font-size: 30px; padding: 1px;"> We're glad to have you here.</p>
             <p style="font-size: 16px; padding: 1px;"> This is a brand new app wich you can create and manage your daily tasks.</p>
             <p style="font-size: 16px; padding: 1px;"> You can add a new task bellow or click on menu to see more features! </p>
         </div>
@@ -76,7 +66,7 @@
 
         <div class="form-group" style="display: flex; flex-direction: column; width: 100%; align-items: center;">
             <label for="formGroupExampleInput2"> Type: </label>
-            <select style="text-align: center; width: 300px; background-color: white; font-size: 20px; color: #245880;">
+            <select id="selectType" style="text-align: center; width: 300px; background-color: white; font-size: 20px; color: #245880;">
                 <option label="-"selected> - </option>
                 <option label="Work"> Work Task</option>
                 <option label="Health"> Health </option>
@@ -88,5 +78,13 @@
       </form>
 
       <script src="../helpers/Js/hamburguerFunction.js"></script>
+      <script src="../js/model/User.js"></script>
+      <script src="../js/controller/UserController.js"></script>
+      <script src="../js/view/UserView.js"></script>
+      <script>
+        let menu = document.querySelector('.menu-div')
+        let userView = new UserView(menu)
+      </script>
+
 </body>
 </html>
