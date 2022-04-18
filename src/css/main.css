@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Amatic SC', cursive;
+    list-style: none;
+    text-decoration: none
 };
-
-
 
 @media(max-width: 500px){
 
