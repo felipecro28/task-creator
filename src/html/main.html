@@ -56,20 +56,26 @@
       </main>
 
 
-      <div style="display: flex; flex-direction: column; align-items: center; height: 30vh; background-color: #6fa7a4e7">
+      <div style="display: flex; flex-direction: column; align-items: center; height: 33vh; background-color: #6fa7a4e7">
 
         <div class="input-group" style="width: 80%; display: flex;">
             <span class="input-group-text" style="width: 90px;">Name: </span>
-            <input type="text" aria-label="Name" class="form-control">
+            <input type="text" aria-label="Name" class="form-control" id="user-name">
         </div>
         <div class="input-group" style="width: 80%; display: flex;">
             <span class="input-group-text" style="width: 90px; margin: 20px auto;">E-mail: </span>
-            <input type="text" aria-label="E-mail" class="form-control" style="margin: 20px auto;">
+            <input type="text" aria-label="E-mail" class="form-control" style="margin: 20px auto;" id="user-email">
         </div>
 
-        <button type="button" class="btn btn-outline-primary" style="background-color: #c8d4b4; width: 100px; height: 50px; font-size: 20px;">  <a href="../html/taskManager.html">Start Now!</a></button>
+        <button type="button" class="btn btn-outline-primary" style="background-color: #c8d4b4; width: 100px; height: 50px; font-size: 20px;">  <a href="../html/taskManager.html" onclick="pageUser.addUser()">Start Now!</a></button>
     </div>
 
 <script src="../helpers/Js/hamburguerFunction.js"></script>
+<script src="../js/model/User.js"></script>
+<script src="../js/controller/UserController.js"></script>
+<script src="../js/view/UserView.js"></script>
+<script>
+  let pageUser = new UserController()
+</script>
 </body>
 </html>
