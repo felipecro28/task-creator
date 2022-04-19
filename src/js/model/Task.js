@@ -1,7 +1,8 @@
 class Task {
-    constructor (taskName, deadline, type){
+    constructor (taskName, deadline, description ,type){
         this._tasknName = taskName
-        this._deadline = new Date (deadline)
+        this._deadline = deadline
+        this._description = description
         this._type = type
     }
 

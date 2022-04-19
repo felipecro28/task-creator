@@ -25,7 +25,7 @@
   }
     </style>
 </head>
-<body onload="userView.viewNewUser(localStorage.getItem('newUser'))" style="background-color: #c8d4b4; color: #245880;">
+<body onload="userView.viewNewUser(localStorage.getItem('newUser')), taskView.showTask(localStorage.getItem('taskList'))" style="background-color: #c8d4b4; color: #245880;">
     
     <nav class="navbar navbar-light bg-light" style="background-color: #c8d4b4; height: 8vh;">
         <div class="container">
@@ -42,44 +42,26 @@
 
 
       <div class="text-task" style="text-align: center; padding: 20px 0;">
-          
           <p style="font-size: 22px;">Welcome to your task manager!</p>
           <p>Drag a task to conclude or click on the x button to delete.</p>
       </div>
 
     <div class="list-group" style="font-size: 20px; padding: 10px 0; width: 90%; margin: 0 auto;">
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" style="background-color: rgba(69, 152, 219, 0.479); margin: 10px 0;">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
-            <small class="text-muted">3 days ago</small>
-          </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <div class="d-flex w-100 justify-content-between">
-          <small class="text-muted">Donec id elit non mi porta.</small>
-          <p>&#x26D4;</p>
-          </div>
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" style="background-color: rgba(69, 152, 219, 0.479);">
-            <div class="d-flex w-100 justify-content-between">
-              <h5 class="mb-1">List group item heading</h5>
-              <small class="text-muted">3 days ago</small>
-            </div>
-            <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            <div class="d-flex w-100 justify-content-between">
-            <small class="text-muted">Donec id elit non mi porta.</small>
-            <p>&#x26D4;</p>
-            </div>
-          </a>
+        
       </div>
 
       <script src="../helpers/Js/hamburguerFunction.js"></script>
       <script src="../js/model/User.js"></script>
       <script src="../js/controller/UserController.js"></script>
       <script src="../js/view/UserView.js"></script>
+      <script src="../js/model/Task.js"></script>
+      <script src="../js/controller/TaskController.js"></script>
+      <script src="../js/view/TaskView.js"></script>
       <script>
         let menu = document.querySelector('.menu-div')
+        let list = document.querySelector('.list-group')
         let userView = new UserView(menu)
+        let taskView = new TaskView(list)
       </script>
       
 </body>
