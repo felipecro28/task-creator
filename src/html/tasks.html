@@ -23,6 +23,21 @@
           transform: translateY(0);
   }
   }
+
+    @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  @keyframes hide {
+    100% {
+      opacity: 0;
+    }
+  }
+
+
     </style>
 </head>
 <body onload="userView.viewNewUser(localStorage.getItem('newUser')), taskView.showTask(localStorage.getItem('taskList'))" style="background-color: #c8d4b4; color: #245880;">
@@ -43,7 +58,7 @@
 
       <div class="text-task" style="text-align: center; padding: 20px 0;">
           <p style="font-size: 22px;">Welcome to your task manager!</p>
-          <p>Drag a task to conclude or click on the x button to delete.</p>
+          <p>Click on the x button to delete or conclude a task.</p>
       </div>
 
     <div class="list-group" style="font-size: 20px; padding: 10px 0; width: 90%; margin: 0 auto;">
@@ -57,6 +72,7 @@
       <script src="../js/model/Task.js"></script>
       <script src="../js/controller/TaskController.js"></script>
       <script src="../js/view/TaskView.js"></script>
+      <script src="../js/model/TaskList.js"></script>
       <script>
         let menu = document.querySelector('.menu-div')
         let list = document.querySelector('.list-group')

@@ -17,7 +17,7 @@ class UserView{
         <ul style="width: 100%; display: flex; flex-direction: row; justify-content: space-evenly; list-style: none; padding-left: 0; border: solid 1px #245880; border-radius: 20px;">
             <a style="text-decoration: none" href="../html/tasks.html"><li>Manage Tasks</li></a>
             <a style="text-decoration: none" href="../html/main.html"><li>Login</li></a>
-            <a style="text-decoration: none" href="./main.html"><li>Back</li></a>
+            <a style="text-decoration: none" href="./taskManager.html"><li>Add new task</li></a>
         </ul>
         <div class="social-media-icons" style="display: flex; flex-direction: row; justify-content: space-evenly;">
             <a href="https://github.com/felipecro28"><img src="../img/GitHub_Logo.png" alt="logo Github" width=50 height=30></a>
