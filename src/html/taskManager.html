@@ -47,10 +47,8 @@
         </div>
       </main>
 
-      <section style="background-color: #c8d4b4; display: none; justify-content: center; height: fit-content;">
-        <div class="alert alert-info" role="alert">
-          Task successfully added!
-        </div>
+      <section class="addedTask" style=" text-align: center; background-color: #c8d4b4; justify-content: center; height: fit-content;">
+
       </section>
 
       <form style="height: 67vh; font-size: 25px; text-align: center; background-color: #c8d4b4; color: #245880; width: 100%; padding-top: 30px;">
@@ -78,7 +76,7 @@
                 <option label="Housework"> Housework</option>
                 <option label="Social"> Social </option>
             </select>
-            <button onclick="taskController.addTask(event)" type="button" class="btn btn-primary btn-sm" style="width: 100px; font-size: 18px; margin-top: 20px;">Create Task!</button>
+            <button onclick="taskController.addTask(event), TaskView.addedTask(addedTaskDiv)" type="button" class="btn btn-primary btn-sm" style="width: 100px; font-size: 18px; margin-top: 20px;">Create Task!</button>
         </div>
       </form>
       <script src="../helpers/Js/dateFunction.js"></script>
@@ -94,6 +92,7 @@
         let menu = document.querySelector('.menu-div')
         let userView = new UserView(menu)
         let taskController = new TaskController()
+        let addedTaskDiv = document.querySelector('.addedTask')
       </script>
 
 </body>
