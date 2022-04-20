@@ -5,7 +5,7 @@ You can see the application running on [this link](https://felipecro28.github.io
 Or, in case the link above break, you can also acess the aplication by the direct link below:
 https://felipecro28.github.io/task-creator/
 
-The project follows the MVC architeture and, for design it, were created users, tasks and lists classes and instances, each one responsible just for create, controll, show or hide.
+The project is 100% responsive and follows the MVC architeture and, for design it, were created users, tasks and lists classes and instances, each one responsible just for create, controll, show or hide.
 
 As example, we can see how a class method was used to show a task on our task menu.
 
